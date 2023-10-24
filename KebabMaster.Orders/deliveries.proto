@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "KebabMaster.Orders.Grpc";
+
+service Deliverer {
+  rpc SendDelivery (HelloRequest) returns (HelloReply);
+}
+
+message Delivery {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}

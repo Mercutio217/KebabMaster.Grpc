@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "KebabMaster.Deliveries";
+import "google/protobuf/wrappers.proto";
+
+service Deliverer {
+  rpc SendOrder (DeliveryRequest) returns (DeliveryResponse);
+}
+
+// The request message containing the user's name.
+message DeliveryRequest {
+  string StreetName = 1;
+  int32 StreetNumber = 2;
+  google.protobuf.Int32Value FlatNumber = 3;
+}
+
+// The response message containing the greetings.
+message DeliveryResponse {
+  bool isSuccess = 1;
+  string message = 2;
+}

@@ -1,0 +1,101 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KebabMaster.Authorization", "KebabMaster.Authorization", "{3F076DFB-37A1-4B84-9D2E-4B45BC1B67DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.Domain", "KebabMaster.Authorization\KebabMaster.Authorization.Domain\KebabMaster.Authorization.Domain.csproj", "{A4E4BF7E-399E-443D-A452-0092B64D8AA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.Domain.Tests", "KebabMaster.Authorization\KebabMaster.Authorization.Domain.Tests\KebabMaster.Authorization.Domain.Tests.csproj", "{3C76F213-88C9-48E1-82A7-175A7ECA7C22}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.Infrastructure", "KebabMaster.Authorization\KebabMaster.Authorization.Infrastructure\KebabMaster.Authorization.Infrastructure.csproj", "{EB5EBF2F-63F6-4A4B-B6E5-C57492D513DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.Infrastructure.Tests", "KebabMaster.Authorization\KebabMaster.Authorization.Infrastructure.Tests\KebabMaster.Authorization.Infrastructure.Tests.csproj", "{CF33A3A9-BCEE-4705-921E-3E43516C6B4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.WebApi", "KebabMaster.Authorization\KebabMaster.Authorization.WebApi\KebabMaster.Authorization.WebApi.csproj", "{AE13F3F6-F7CB-4B8D-9293-C00E82B2DAFB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Deliveries", "KebabMaster.Deliveries\KebabMaster.Deliveries.csproj", "{8A51884F-0928-41DB-8743-35A4C46DEC9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KebabMaster.Orders", "KebabMaster.Orders", "{A2FD6D58-0430-44DC-8AA2-91710CE40763}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Orders.Domain", "KebabMaster.Orders\KebabMaster.Orders.Domain\KebabMaster.Orders.Domain.csproj", "{F4EB7B7D-AC34-416A-A2E8-B23990AAC125}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Orders.Infrastructure.Grpc", "KebabMaster.Orders\KebabMaster.Orders.Grpc\KebabMaster.Orders.Infrastructure.Grpc.csproj", "{41DE8F60-CC20-447D-A67F-335040B42869}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Orders.Infrastructure", "KebabMaster.Orders\KebabMaster.Orders.Infrastructure\KebabMaster.Orders.Infrastructure.csproj", "{316ED39E-F16A-4E15-A43F-EBD17200FC8A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Orders.WebApi", "KebabMaster.Orders\KebabMaster.Orders.WebApi\KebabMaster.Orders.WebApi.csproj", "{E219F71D-E984-44EA-8587-57964CD09E96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D90EEC2-C3B6-47CB-A696-5A9635DDC711}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protos", "Protos", "{9C32FCCB-701E-4499-8E7D-1700DBD4D9BE}"
+	ProjectSection(SolutionItems) = preProject
+		Protos\deliverer.proto = Protos\deliverer.proto
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4E4BF7E-399E-443D-A452-0092B64D8AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E4BF7E-399E-443D-A452-0092B64D8AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E4BF7E-399E-443D-A452-0092B64D8AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E4BF7E-399E-443D-A452-0092B64D8AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C76F213-88C9-48E1-82A7-175A7ECA7C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C76F213-88C9-48E1-82A7-175A7ECA7C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C76F213-88C9-48E1-82A7-175A7ECA7C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C76F213-88C9-48E1-82A7-175A7ECA7C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB5EBF2F-63F6-4A4B-B6E5-C57492D513DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5EBF2F-63F6-4A4B-B6E5-C57492D513DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5EBF2F-63F6-4A4B-B6E5-C57492D513DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5EBF2F-63F6-4A4B-B6E5-C57492D513DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF33A3A9-BCEE-4705-921E-3E43516C6B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF33A3A9-BCEE-4705-921E-3E43516C6B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF33A3A9-BCEE-4705-921E-3E43516C6B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF33A3A9-BCEE-4705-921E-3E43516C6B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE13F3F6-F7CB-4B8D-9293-C00E82B2DAFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE13F3F6-F7CB-4B8D-9293-C00E82B2DAFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE13F3F6-F7CB-4B8D-9293-C00E82B2DAFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE13F3F6-F7CB-4B8D-9293-C00E82B2DAFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A51884F-0928-41DB-8743-35A4C46DEC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A51884F-0928-41DB-8743-35A4C46DEC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A51884F-0928-41DB-8743-35A4C46DEC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A51884F-0928-41DB-8743-35A4C46DEC9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EB7B7D-AC34-416A-A2E8-B23990AAC125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EB7B7D-AC34-416A-A2E8-B23990AAC125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EB7B7D-AC34-416A-A2E8-B23990AAC125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EB7B7D-AC34-416A-A2E8-B23990AAC125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41DE8F60-CC20-447D-A67F-335040B42869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41DE8F60-CC20-447D-A67F-335040B42869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41DE8F60-CC20-447D-A67F-335040B42869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41DE8F60-CC20-447D-A67F-335040B42869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316ED39E-F16A-4E15-A43F-EBD17200FC8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316ED39E-F16A-4E15-A43F-EBD17200FC8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316ED39E-F16A-4E15-A43F-EBD17200FC8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316ED39E-F16A-4E15-A43F-EBD17200FC8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E219F71D-E984-44EA-8587-57964CD09E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E219F71D-E984-44EA-8587-57964CD09E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E219F71D-E984-44EA-8587-57964CD09E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E219F71D-E984-44EA-8587-57964CD09E96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A4E4BF7E-399E-443D-A452-0092B64D8AA5} = {3F076DFB-37A1-4B84-9D2E-4B45BC1B67DC}
+		{3C76F213-88C9-48E1-82A7-175A7ECA7C22} = {3F076DFB-37A1-4B84-9D2E-4B45BC1B67DC}
+		{EB5EBF2F-63F6-4A4B-B6E5-C57492D513DE} = {3F076DFB-37A1-4B84-9D2E-4B45BC1B67DC}
+		{CF33A3A9-BCEE-4705-921E-3E43516C6B4B} = {3F076DFB-37A1-4B84-9D2E-4B45BC1B67DC}
+		{AE13F3F6-F7CB-4B8D-9293-C00E82B2DAFB} = {3F076DFB-37A1-4B84-9D2E-4B45BC1B67DC}
+		{F4EB7B7D-AC34-416A-A2E8-B23990AAC125} = {A2FD6D58-0430-44DC-8AA2-91710CE40763}
+		{41DE8F60-CC20-447D-A67F-335040B42869} = {A2FD6D58-0430-44DC-8AA2-91710CE40763}
+		{316ED39E-F16A-4E15-A43F-EBD17200FC8A} = {A2FD6D58-0430-44DC-8AA2-91710CE40763}
+		{E219F71D-E984-44EA-8587-57964CD09E96} = {A2FD6D58-0430-44DC-8AA2-91710CE40763}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA69AF53-1B15-4CC6-A6ED-890AC72E84CB}
+	EndGlobalSection
+EndGlobal

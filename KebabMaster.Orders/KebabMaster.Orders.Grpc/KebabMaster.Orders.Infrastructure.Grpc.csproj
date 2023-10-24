@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>KebabMaster.Grpc</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Google.Protobuf" Version="3.24.4" />
+      <PackageReference Include="Grpc.Net.Client" Version="2.58.0" />
+      <PackageReference Include="Grpc.Tools" Version="2.59.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+	<ItemGroup>
+		<Protobuf Include="Protos\deliverer.proto" GrpcServices="Client" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Protos\deliverer.proto">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\KebabMaster.Orders.Domain\KebabMaster.Orders.Domain.csproj" />
+	</ItemGroup>
+
+</Project>
