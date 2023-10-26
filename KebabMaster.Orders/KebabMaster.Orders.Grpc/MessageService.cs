@@ -1,18 +1,22 @@
-﻿using Grpc.Net.Client;
+﻿using Grpc.Core;
+using Grpc.Net.Client;
 using KebabMaster.Deliveries;
 using KebabMaster.Grpc.Interfaces;
 using KebabMaster.Orders.Domain.Entities;
 using KebabMaster.Orders.Domain.Interfaces;
+using Microsoft.AspNetCore.Http;
 
 namespace KebabMaster.Grpc;
 
 public class MessageService : IMessageService
 {
     private readonly IApplicationLogger _logger;
+    private readonly IHttpContextAccessor _accessor;
 
-    public MessageService(IApplicationLogger logger)
+    public MessageService(IApplicationLogger logger, IHttpContextAccessor accessor)
     {
         _logger = logger;
+        _accessor = accessor;
     }
 
     public async Task<bool> SendMessage(Order order)
@@ -28,8 +32,12 @@ public class MessageService : IMessageService
         {
             var channel = GrpcChannel.ForAddress("https://localhost:7256");
             var client = new Deliverer.DelivererClient(channel);
-            DeliveryResponse? reply = await client.SendOrderAsync(request);
+            var headers = new Metadata();
+            var token = _accessor.HttpContext.Request.Headers["Authorization"];
+            //headers.Add("Authorization", token);
 
+            DeliveryResponse? reply = await client.CreateDeliveryAsync(request, headers);
+            
             return reply.IsSuccess;
 
         } catch (Exception ex)

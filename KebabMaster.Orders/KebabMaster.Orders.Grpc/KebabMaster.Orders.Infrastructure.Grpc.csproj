@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
@@ -14,17 +14,14 @@
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     </ItemGroup>
-	<ItemGroup>
-		<Protobuf Include="Protos\deliverer.proto" GrpcServices="Client" />
-	</ItemGroup>
-	<ItemGroup>
-	  <None Update="Protos\deliverer.proto">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </None>
-	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\KebabMaster.Orders.Domain\KebabMaster.Orders.Domain.csproj" />
 	</ItemGroup>
-
+	<ItemGroup>
+		<Protobuf Include="..\..\Protos\deliverer.proto" GrpcServices="Client">
+		  <CopyToOutputDirectory>IfNewer</CopyToOutputDirectory>
+		</Protobuf>
+	</ItemGroup>
 </Project>

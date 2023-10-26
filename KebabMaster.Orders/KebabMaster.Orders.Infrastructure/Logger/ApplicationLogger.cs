@@ -65,4 +65,14 @@ public class ApplicationLogger : IApplicationLogger
     {
         _logger.LogError($"There was error validation exception: {validationException.GetValidationErrorMessage()}");
     }
+
+    public void LogDeliveryRequestSuccess()
+    {
+        _logger.LogInformation($"Delivery request was successful!");
+    }
+
+    public void LogDeliveryRequestFailed()
+    {
+        _logger.LogError($"Delivery failed!");
+    }
 }

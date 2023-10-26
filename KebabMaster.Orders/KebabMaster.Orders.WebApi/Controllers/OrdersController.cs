@@ -2,11 +2,13 @@ using KebabMaster.Orders.Domain.Entities;
 using KebabMaster.Orders.Domain.Filters;
 using KebabMaster.Orders.DTOs;
 using KebabMaster.Orders.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KebabMaster.Orders.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("[controller]")]
 public class OrdersController : ApplicationBaseController
 {

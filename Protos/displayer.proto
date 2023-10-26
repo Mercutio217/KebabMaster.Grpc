@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "KebabMaster.Communication";
+
+import "google/protobuf/empty.proto";
+
+service Displayer {
+  rpc Display (google.protobuf.Empty) returns (stream DisplayResponse);
+}
+
+message DisplayResponse {
+  repeated UserResponse Payload = 1;
+}
+
+message UserResponse {
+  string Email = 1;
+  string StreetName = 2;
+  int32 StreetNumber = 3;
+  string Time = 4;
+}

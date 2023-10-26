@@ -1,18 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KebabMaster.Authorization.WebApi", "KebabMaster.Authorization.WebApi\KebabMaster.Authorization.WebApi.csproj", "{0B089CAB-540F-43A2-8519-095A9016BC7C}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.WebApi", "KebabMaster.Authorization.WebApi\KebabMaster.Authorization.WebApi.csproj", "{0B089CAB-540F-43A2-8519-095A9016BC7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KebabMaster.Authorization.Domain", "KebabMaster.Authorization.Domain\KebabMaster.Authorization.Domain.csproj", "{B07A4F6C-67F4-4FF1-ABFB-420D3FC35000}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.Domain", "KebabMaster.Authorization.Domain\KebabMaster.Authorization.Domain.csproj", "{B07A4F6C-67F4-4FF1-ABFB-420D3FC35000}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KebabMaster.Authorization.Infrastructure", "KebabMaster.Authorization.Infrastructure\KebabMaster.Authorization.Infrastructure.csproj", "{A5F285C3-85B1-4336-956B-4445A1D7EAEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.Infrastructure", "KebabMaster.Authorization.Infrastructure\KebabMaster.Authorization.Infrastructure.csproj", "{A5F285C3-85B1-4336-956B-4445A1D7EAEC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{35BA804B-6A98-40B8-ACB7-033B77747251}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KebabMaster.Authorization.Domain.Tests", "KebabMaster.Authorization.Domain.Tests\KebabMaster.Authorization.Domain.Tests.csproj", "{C634E879-A770-4A18-B831-E1CE3A1AB5F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.Domain.Tests", "KebabMaster.Authorization.Domain.Tests\KebabMaster.Authorization.Domain.Tests.csproj", "{C634E879-A770-4A18-B831-E1CE3A1AB5F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KebabMaster.Authorization.Infrastructure.Tests", "KebabMaster.Authorization.Infrastructure.Tests\KebabMaster.Authorization.Infrastructure.Tests.csproj", "{CDD225EA-8394-4A9F-9BA1-98B1E65C4413}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KebabMaster.Authorization.WebApi.Tests", "KebabMaster.Authorization.WebApi.Tests\KebabMaster.Authorization.WebApi.Tests.csproj", "{26281DCE-88BE-4111-A1BD-684C80F22C9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.Infrastructure.Tests", "KebabMaster.Authorization.Infrastructure.Tests\KebabMaster.Authorization.Infrastructure.Tests.csproj", "{CDD225EA-8394-4A9F-9BA1-98B1E65C4413}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,14 +41,15 @@ Global
 		{CDD225EA-8394-4A9F-9BA1-98B1E65C4413}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDD225EA-8394-4A9F-9BA1-98B1E65C4413}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDD225EA-8394-4A9F-9BA1-98B1E65C4413}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26281DCE-88BE-4111-A1BD-684C80F22C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26281DCE-88BE-4111-A1BD-684C80F22C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26281DCE-88BE-4111-A1BD-684C80F22C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26281DCE-88BE-4111-A1BD-684C80F22C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C634E879-A770-4A18-B831-E1CE3A1AB5F0} = {35BA804B-6A98-40B8-ACB7-033B77747251}
 		{CDD225EA-8394-4A9F-9BA1-98B1E65C4413} = {35BA804B-6A98-40B8-ACB7-033B77747251}
-		{26281DCE-88BE-4111-A1BD-684C80F22C9A} = {35BA804B-6A98-40B8-ACB7-033B77747251}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40645537-73C6-4038-BB2D-B40FFC7CB501}
 	EndGlobalSection
 EndGlobal

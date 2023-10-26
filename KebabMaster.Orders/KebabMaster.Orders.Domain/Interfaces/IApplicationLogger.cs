@@ -10,6 +10,8 @@ public interface IApplicationLogger
     void LogPostStart(object request);
     void LogPostEnd(object request);
     void LogException(Exception exception);
+    void LogDeliveryRequestSuccess();
+    void LogDeliveryRequestFailed();
     void LogValidationException(ApplicationValidationException applicationValidationException);
 
 }

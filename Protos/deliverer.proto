@@ -1,21 +1,31 @@
+// Definition of syntax (default is proto2, which is more limited)
 syntax = "proto3";
 
+// Definition of protbuf namespace (like for imports)
+package KebabMaster;
+// C# namespace for generated code
 option csharp_namespace = "KebabMaster.Deliveries";
+// Imports of types
 import "google/protobuf/wrappers.proto";
 
+// Client/Server service definition
 service Deliverer {
-  rpc SendOrder (DeliveryRequest) returns (DeliveryResponse);
+  rpc CreateDelivery (DeliveryRequest) returns (DeliveryResponse);
 }
 
-// The request message containing the user's name.
+// Request definition, types are gRpc types, not language specific
 message DeliveryRequest {
-  string StreetName = 1;
+  string StreetName = 1; // Field numbers are used for identification for properties during parsing
   int32 StreetNumber = 2;
-  google.protobuf.Int32Value FlatNumber = 3;
+  google.protobuf.Int32Value FlatNumber = 3; //It's nullable int ;)
+  string Email = 4;
+  reserved 5; //When some property is deprecated in one part of call, 
+  //is better to leave "old" number reserved to avoid encoding problesm
 }
 
-// The response message containing the greetings.
+// Response definition
 message DeliveryResponse {
-  bool isSuccess = 1;
-  string message = 2;
+  bool IsSuccess = 1;
+  string Message = 2;
+  repeated string BugList = 3; // Repeated is collection
 }

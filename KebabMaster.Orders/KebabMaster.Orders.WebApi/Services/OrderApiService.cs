@@ -42,7 +42,13 @@ public class OrderApiService : IOrderApiService
             Order order = _mapper.Map<Order>(request);
 
             await _orderService.CreateOrder(order);
-            await _messageService.SendMessage(order);
+            var result = await _messageService.SendMessage(order);
+
+            if (result)
+                _logger.LogDeliveryRequestSuccess();
+            else
+                _logger.LogDeliveryRequestFailed();
+
             _logger.LogPostEnd(order);
         });
     }
