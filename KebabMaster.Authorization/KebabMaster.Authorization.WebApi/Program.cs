@@ -71,7 +71,7 @@ app.Run();
 void SetDatabase()
 {
     DatabaseOptions settings = builder.Configuration.GetSection("Database").Get<DatabaseOptions>();
-    var database = new ApplicationDbContext(Options.Create(settings));
+    var database = new ApplicationDbContext();
     database.Database.EnsureCreated();
     
     if (!database.Roles.Any())
@@ -90,8 +90,7 @@ void SetDatabase()
     
         adminUser.PaswordHash = "799DBF90EE52688EB50516DE263415C05207AD00866860331795784F1EC950CF";
         adminUser.Roles = new List<Role>() { database.Roles.First(r => r.Name == "Admin") };
-        database.Users.Add(adminUser);
-    }
+        database.Users.Add(adminUser); }
 
     database.SaveChanges();
 }

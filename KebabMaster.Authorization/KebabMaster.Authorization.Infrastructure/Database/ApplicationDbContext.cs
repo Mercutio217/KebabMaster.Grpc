@@ -7,17 +7,15 @@ namespace KebabMaster.Authorization.Infrastructure.Database;
 
 public class ApplicationDbContext : DbContext
 {
-    private readonly DatabaseOptions _databaseOptions;
-    public ApplicationDbContext(IOptions<DatabaseOptions> options)
+    public ApplicationDbContext()
     {
-        _databaseOptions = options.Value;
     }
     public DbSet<User> Users { get; set; }
     public DbSet<Role> Roles { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(_databaseOptions.ConnectionString);    
+        optionsBuilder.UseInMemoryDatabase("AuthorizationDb");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -40,10 +38,9 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<User>()
             .Property(us => us.UserName)
             .HasMaxLength(50);
-        
+
         modelBuilder.Entity<User>()
-            .HasMany(ent => ent.Roles)
-            .WithMany();
+            .HasMany(ent => ent.Roles);
         
         modelBuilder.Entity<User>()
             .HasIndex(u => u.UserName)

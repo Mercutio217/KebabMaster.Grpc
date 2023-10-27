@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{35BA804B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.Domain.Tests", "KebabMaster.Authorization.Domain.Tests\KebabMaster.Authorization.Domain.Tests.csproj", "{C634E879-A770-4A18-B831-E1CE3A1AB5F0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KebabMaster.Authorization.Infrastructure.Tests", "KebabMaster.Authorization.Infrastructure.Tests\KebabMaster.Authorization.Infrastructure.Tests.csproj", "{CDD225EA-8394-4A9F-9BA1-98B1E65C4413}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,17 +35,12 @@ Global
 		{C634E879-A770-4A18-B831-E1CE3A1AB5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C634E879-A770-4A18-B831-E1CE3A1AB5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C634E879-A770-4A18-B831-E1CE3A1AB5F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CDD225EA-8394-4A9F-9BA1-98B1E65C4413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDD225EA-8394-4A9F-9BA1-98B1E65C4413}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDD225EA-8394-4A9F-9BA1-98B1E65C4413}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDD225EA-8394-4A9F-9BA1-98B1E65C4413}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C634E879-A770-4A18-B831-E1CE3A1AB5F0} = {35BA804B-6A98-40B8-ACB7-033B77747251}
-		{CDD225EA-8394-4A9F-9BA1-98B1E65C4413} = {35BA804B-6A98-40B8-ACB7-033B77747251}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {40645537-73C6-4038-BB2D-B40FFC7CB501}

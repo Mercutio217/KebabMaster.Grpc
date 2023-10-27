@@ -1,3 +1,4 @@
+using System.Text;
 using Grpc.Net.Client;
 
 namespace KebabMaster.Watcher;
@@ -25,9 +26,11 @@ public class Worker : BackgroundService
             Communication.DisplayResponse? current = request.ResponseStream.Current;
             if(current?.Payload.Count > 0 && current.Payload.Count > previousCount)
             {
-                _logger.LogInformation($"AT {DateTime.UtcNow}, current deliveries are:");
+                var builder = new StringBuilder($"AT {DateTime.UtcNow}, current deliveries are:\n");
+                
                 foreach (var item in current.Payload)
-                    _logger.LogInformation($"{item.Email} {item.StreetName} {item.StreetNumber} {item.Time}");
+                    builder.Append($"{item.Email} {item.StreetName} {item.StreetNumber} {item.Time}\n");
+                _logger.LogInformation(builder.ToString());
 
                 previousCount = current.Payload.Count;  
             }

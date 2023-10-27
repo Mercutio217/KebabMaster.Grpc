@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace KebabMaster.Orders.Controllers;
 
 [ApiController]
-[Authorize]
 [Route("[controller]")]
 public class OrdersController : ApplicationBaseController
 {
@@ -50,6 +49,6 @@ public class OrdersController : ApplicationBaseController
     public async Task<IActionResult> Post(OrderRequest orderRequest) => 
         await Execute(() => _orderApiService.CreateOrder(orderRequest), NoContent());
 
-    [HttpGet("menu")]
+    [HttpGet("/menu")]
     public async Task<IEnumerable<MenuItem>> GetItems() => await _orderApiService.GetMenuItems();
 }

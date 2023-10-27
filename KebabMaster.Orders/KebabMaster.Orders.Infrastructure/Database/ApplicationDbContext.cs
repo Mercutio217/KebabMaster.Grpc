@@ -9,15 +9,15 @@ namespace KebabMaster.Orders.Infrastructure.Database;
 public class ApplicationDbContext : DbContext
 {
     private readonly DatabaseOptions _databaseOptions;
-    public ApplicationDbContext(IOptions<DatabaseOptions> options)
+
+    public ApplicationDbContext()
     {
-        _databaseOptions = options.Value;
     }
     public DbSet<Order> Orders { get; set; }
     public DbSet<MenuItem> MenuItems { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(_databaseOptions.ConnectionString);    
+        optionsBuilder.UseInMemoryDatabase("Orders");
     }
 }

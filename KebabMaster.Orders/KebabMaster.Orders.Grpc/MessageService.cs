@@ -34,7 +34,8 @@ public class MessageService : IMessageService
             var client = new Deliverer.DelivererClient(channel);
             var headers = new Metadata();
             var token = _accessor.HttpContext.Request.Headers["Authorization"];
-            //headers.Add("Authorization", token);
+            if(token.Count > 0)
+                headers.Add("Authorization", token);
 
             DeliveryResponse? reply = await client.CreateDeliveryAsync(request, headers);
             

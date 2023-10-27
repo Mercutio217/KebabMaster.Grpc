@@ -79,18 +79,17 @@ app.Run();
 
 void SetupDatabase()
 {
-    DatabaseOptions settings = builder.Configuration.GetSection("Database").Get<DatabaseOptions>();
-    var database = new ApplicationDbContext(Options.Create(settings));
+    var database = new ApplicationDbContext();
     database.Database.EnsureCreated();
 
     if (!database.MenuItems.Any())
     {
 
-        database.MenuItems.Add(new MenuItem("Chicken Kebab", 9.99));
-        database.MenuItems.Add(new MenuItem("Beef Kebab", 10.99));
-        database.MenuItems.Add(new MenuItem("Lamb Kebab", 12.99));
-        database.MenuItems.Add(new MenuItem("Vegetable Kebab", 8.99));
-        database.MenuItems.Add(new MenuItem("Mixed Kebab", 11.99));
+        database.MenuItems.Add(new MenuItem(new Guid("089FC182-B76C-4521-9CA8-9FCF5F2B3701"), "Chicken Kebab", 9.99));
+        database.MenuItems.Add(new MenuItem(new Guid("EC4E787D-68F4-4DFC-A66B-E30635F5C14C"),"Beef Kebab", 10.99));
+        database.MenuItems.Add(new MenuItem(new Guid("995F97AE-89A5-48F2-8F2F-1DC8DC64FAC2"),"Lamb Kebab", 12.99));
+        database.MenuItems.Add(new MenuItem(new Guid("F50B470A-8F2D-47A0-8EDB-976F6D52A00D"),"Vegetable Kebab", 8.99));
+        database.MenuItems.Add(new MenuItem(new Guid("DBE65F4B-BE65-4DDD-AC99-B29D6E9EE5F1"), "Mixed Kebab", 11.99));
     }
 
     database.SaveChanges();
