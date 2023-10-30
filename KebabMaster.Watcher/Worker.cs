@@ -37,6 +37,5 @@ public class Worker : BackgroundService
 
             await Task.Delay(5000);
         }
-
     }
 }

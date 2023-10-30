@@ -62,7 +62,7 @@ public class UserManagementService : IUserManagementService
     {
         return await Execute(async () =>
         {
-            _logger.LogLoginStart(model);
+            _logger.LogLoginStart(model.Email);
             
             var user = await _repository.GetUserByEmail(model.Email);
             if (user is null)
@@ -86,7 +86,7 @@ public class UserManagementService : IUserManagementService
 
             var token = GetToken(claims);
             
-            _logger.LogLoginEnd(model);
+            _logger.LogLoginEnd(model.Email);
 
             return new TokenResponse()
             {
